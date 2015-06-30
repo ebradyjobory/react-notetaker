@@ -23681,6 +23681,9 @@
 	var Notes = React.createClass({
 	  displayName: 'Notes',
 
+	  propTypes: {
+	    notes: React.PropTypes.array.isRequired
+	  },
 	  render: function render() {
 	    return React.createElement(
 	      'div',
@@ -23689,7 +23692,6 @@
 	      this.props.notes
 	    );
 	  }
-
 	});
 
 	module.exports = Notes;
@@ -23705,10 +23707,16 @@
 	var Repos = React.createClass({
 	  displayName: 'Repos',
 
+	  propTypes: {
+	    username: React.PropTypes.string.isRequired,
+	    repos: React.PropTypes.array.isRequired
+	  },
 	  render: function render() {
 	    return React.createElement(
 	      'div',
 	      null,
+	      'User name:  ',
+	      this.props.username,
 	      'Repos: ',
 	      this.props.repos
 	    );
@@ -23729,6 +23737,10 @@
 	var UserProfiles = React.createClass({
 	  displayName: 'UserProfiles',
 
+	  propTypes: {
+	    username: React.PropTypes.string.isRequired,
+	    bio: React.PropTypes.object.isRequired
+	  },
 	  render: function render() {
 	    return React.createElement(
 	      'div',

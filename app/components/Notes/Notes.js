@@ -1,6 +1,9 @@
 var React = require('react');
 
 var Notes = React.createClass({
+  propTypes: {
+    notes: React.PropTypes.array.isRequired
+  },
   render: function () {
     return (
       <div>
@@ -8,7 +11,6 @@ var Notes = React.createClass({
       </div>
     )
   }
-
 });
 
 module.exports = Notes;
